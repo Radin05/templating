@@ -5,8 +5,9 @@
             <ul class="list-unstyled topnav-menu mb-0 d-flex align-items-center">
                 <li>
                     <button class="button-toggle-menu nav-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu noti-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-menu noti-icon">
                             <line x1="3" y1="12" x2="21" y2="12"></line>
                             <line x1="3" y1="6" x2="21" y2="6"></line>
                             <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -15,10 +16,8 @@
                 </li>
                 <li class="d-none d-lg-block">
                     <div class="position-relative topbar-search">
-                        <input type="text" class="form-control bg-light bg-opacity-75 border-light ps-4"
-                            placeholder="Search...">
-                        <i
-                            class="mdi mdi-magnify fs-16 position-absolute text-muted top-50 translate-middle-y ms-2"></i>
+                        <input type="text" class="form-control bg-light bg-opacity-75 border-light ps-4" placeholder="Search...">
+                        <i class="mdi mdi-magnify fs-16 position-absolute text-muted top-50 translate-middle-y ms-2"></i>
                     </div>
                 </li>
             </ul>
@@ -191,7 +190,7 @@
                         <img src="{{ asset('backend/assets/images/users/user-11.jpg') }}" alt="user-image"
                             class="rounded-circle">
                         <span class="pro-user-name ms-1">
-                            Christian <i class="mdi mdi-chevron-down"></i>
+                            {{ Auth::user()->name }}<i class="mdi mdi-chevron-down"></i>
                         </span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end profile-dropdown ">
@@ -216,8 +215,14 @@
 
                         <!-- item-->
                         <a href="auth-logout.html" class="dropdown-item notify-item">
-                            <i class="mdi mdi-location-exit fs-16 align-middle"></i>
-                            <span>Logout</span>
+                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                                    document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
                         </a>
 
                     </div>

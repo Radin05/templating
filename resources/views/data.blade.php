@@ -1,4 +1,4 @@
 @extends('layouts.backend')
 @section('content')
-ini adalah isi konten
+<h1>radin Lorem ipsum dolor sit amet consectetur adipisicing elit. A possimus laboriosam autem asperiores inventore ut quod ex perferendis excepturi!</h1>
 @endsection

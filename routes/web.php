@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layouts.backend');
-})->middleware('auth');
+    return view('welcome');
+});
 
 Route::get('data', function () {
     return view('data');
@@ -23,7 +23,7 @@ Route::get('data', function () {
 
 
 Auth::routes(
-    ['register' => false]
+    // ['register' => false]
 );
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
