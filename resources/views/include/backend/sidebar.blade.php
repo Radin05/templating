@@ -29,16 +29,16 @@
                 <li class="menu-title">Menu</li>
 
                 <li>
-                    <a href="index.html">
+                    <a href="{{ route('user.index') }}">
                         <i data-feather="home"></i>
-                        <span class="badge bg-success rounded-pill float-end">9+</span>
-                        <span> Dashboard </span>
+                        <span> ACL </span>
                     </a>
                 </li>
 
                 <li>
                     <a href="widgets.html">
                         <i data-feather="aperture"></i>
+                        <span class="badge bg-success rounded-pill float-end"></span>
                         <span> Widgets </span>
                     </a>
                 </li>
