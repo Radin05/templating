@@ -41,11 +41,11 @@ class BrandController extends Controller
   */
  public function store(Request $request)
  {
-  $brand             = new Brand;
-  $brand->name_brand = $request->name_brand;
-  
-  $brand->save();
-  return redirect()->route('brand.index');
+    $brand             = new Brand;
+    $brand->name_brand = $request->name_brand;
+
+    $brand->save();
+    return redirect()->route('brand.index');
  }
 
  /**

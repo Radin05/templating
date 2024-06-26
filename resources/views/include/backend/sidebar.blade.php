@@ -64,21 +64,6 @@
                                 <a href="auth-login.html">Log In</a>
                             </li>
                             <li>
-                                <a href="auth-register.html">Register</a>
-                            </li>
-                            <li>
-                                <a href="auth-recoverpw.html">Recover Password</a>
-                            </li>
-                            <li>
-                                <a href="auth-lock-screen.html">Lock Screen</a>
-                            </li>
-                            <li>
-                                <a href="auth-confirm-mail.html">Confirm Mail</a>
-                            </li>
-                            <li>
-                                <a href="email-verification.html">Email Verification</a>
-                            </li>
-                            <li>
                                 <a href="auth-logout.html">Logout</a>
                             </li>
                         </ul>

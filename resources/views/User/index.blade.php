@@ -31,7 +31,15 @@
                                     <td>
                                         <a href="{{ route('user.show', $item->id ) }}" type="button" class="btn btn-primary">show</a>
                                         <a href="{{ route('user.edit', $item->id ) }}" type="button" class="btn btn-warning">edit</a>
-                                        <button type="button" class="btn ripple btn-danger">Hapus</button>
+                                        <a class="btn ripple btn-danger" href="" onclick="event.preventDefault();
+                                            document.getElementById('destroy-form').submit();">
+                                            hapus
+                                        </a>
+
+                                        <form id="destroy-form" action="{{ route('user.destroy', $item->id) }}" method="POST" class="d-none">
+                                            @method('DELETE')
+                                            @csrf
+                                        </form>
                                     </td>
                                 </tr>
                             @endforeach
